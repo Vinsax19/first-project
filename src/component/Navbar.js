@@ -7,13 +7,16 @@ import icon5 from '../icon5.png';
 
 
 const Navbar = () => {
+    const handleDropdownActive = (e) => {
+        e.target.parentElement.classList.toggle('active');
+    }
     return (
         <aside>
-            <h1>Menu</h1>
+            <h1>MENU</h1>
             <ul>
                 <li><span><img src={icon1} alt="icon-1"/> Overview</span></li>
                 <li>
-                    <span><img src={icon2} alt="icon-2"/> Facility Maintenance <i className="fas fa-chevron-down"></i></span>
+                    <span onClick={handleDropdownActive}><img src={icon2} alt="icon-2"/> Facility Maintenance <i className="fas fa-chevron-down"></i></span>
                     <ul className="dropdown">
                         <li>Facility Categorization</li>
                         <li>Facility Profiling</li>

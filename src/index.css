@@ -12,7 +12,7 @@ html {
 .header {
   display: flex;
   background: #fff;
-  height: 10rem;
+  height: 7rem;
   align-items: center;
   justify-content: space-between;
   padding: 0 6rem;
@@ -47,13 +47,14 @@ html {
 
 .header .user>p>span {
   color: rgb(170, 234, 170);
-  font-size: .9rem;
+  font-size: 14px;
 }
 
 .header .user>p>select{
   border: none;
   outline: none;
   background: none;
+  font-size: 16px;
 }
 
 .header .user .notification {
@@ -79,17 +80,17 @@ aside {
   position: absolute;
   left: 0;
   top: 0;
-  background: green;
-  width: 17rem;
+  background: #579659;
+  width: 22rem;
   min-height: 100vh;
-  padding:12rem 3rem;
+  padding:9rem 1rem;
   color: #fff;
   font-weight: 300;
 }
 
 aside h1 {
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 16px;
   font-weight: 300;
   margin-bottom: 1rem;
   color: #fff;
@@ -100,30 +101,61 @@ aside ul {
   padding: 0;
 }
 
+aside>ul>li {
+  margin: .8rem 0;
+  padding:1rem 2rem;
+  width: 80%;
+  font-size: 14px;
+}
+
 aside ul li span{
   display: flex;
   align-items: center;
-  gap: .5rem;
+  gap: .8rem;
   font-size: 1rem;
   font-weight: 300;
   color: #fff;
+  cursor: pointer;
 }
+
 aside ul li span i {
   color: #fff;
+  transition: .6s;
+}
+
+aside ul li.active {
+  background-color: #82CD65;
+
+}
+
+aside ul li.active span i {
+  transform: rotate(180deg);
 }
 
 aside ul li span img{
-  width: 1.6rem;
+  width: 1.2rem;
 }
 
 aside ul li .dropdown {
+  display: none;
   color: #fff;
-  padding: .3rem 4rem;
+  padding: .3rem 2rem;
   padding-right: 0;
+}
+
+aside ul li.active .dropdown {
+  display: block;
 }
 
 aside ul li .dropdown li {
   color: #fff; 
-  margin: 1rem 0;
+  margin: .5rem 0;
   font-size: .8rem;
+  padding: 1rem 1.6rem;
+  cursor: pointer;
+}
+
+aside ul li .dropdown li:hover, aside ul li .dropdown li.active, aside ul li .dropdown li:focus {
+  background: #579659;
+  
 }
